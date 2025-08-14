@@ -34,7 +34,16 @@ void RenderWindow() {
                 }
 
                 UI::TableNextColumn();
-                if (UI::Selectable(icon.name, false)) {
+                string name = icon.name;
+                if (filter.Length > 0) {
+                    name = Regex::Replace(
+                        name,
+                        "(" + filter + ")",
+                        "\\$F00$1\\$G",
+                        Regex::Flags::CaseInsensitive
+                    );
+                }
+                if (UI::Selectable(name, false)) {
                     IO::SetClipboard(icon.name);
                 }
 
