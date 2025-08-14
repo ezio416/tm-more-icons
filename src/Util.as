@@ -16,45 +16,6 @@ void Filter() {
     Sort();
 }
 
-enum SortMethod {
-    NameAsc,
-    NameDesc,
-    CodePointAsc,
-    CodePointDesc
-}
-
-void Sort() {
-    if (iconsFiltered.Length < 2) {
-        return;
-    }
-
-    switch (sortMethod) {
-        case SortMethod::NameAsc:
-            iconsFiltered.Sort(function(a, b) {
-                return a.name.ToLower() < b.name.ToLower();
-            });
-            break;
-
-        case SortMethod::NameDesc:
-            iconsFiltered.Sort(function(a, b) {
-                return a.name.ToLower() > b.name.ToLower();
-            });
-            break;
-
-        case SortMethod::CodePointAsc:
-            iconsFiltered.Sort(function(a, b) {
-                return a.codePoint < b.codePoint;
-            });
-            break;
-
-        case SortMethod::CodePointDesc:
-            iconsFiltered.Sort(function(a, b) {
-                return a.codePoint > b.codePoint;
-            });
-            break;
-    }
-}
-
 uint UTF8ToCodepoint(const uint8[]& bytes) {
     switch (bytes.Length) {
         case 1:
