@@ -6,10 +6,12 @@ const string  pluginIcon  = Icons::Info;
 Meta::Plugin@ pluginMeta  = Meta::ExecutingPlugin();
 const string  pluginTitle = pluginColor + pluginIcon + "\\$G " + pluginMeta.Name;
 
-string     filter;
-Icon@[]    icons;
-Icon@[]    iconsFiltered;
-SortMethod sortMethod = SortMethod::NameAsc;
+string       filter;
+Icon@[]      icons;
+Icon@[]      iconsFiltered;
+const uint64 maxFrameTime  = 50;
+uint64       sortLastYield = 0;
+SortMethod   sortMethod = SortMethod::NameAsc;
 
 void Main() {
     dictionary@ allIcons = Icons::GetAll();

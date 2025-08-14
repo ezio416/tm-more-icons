@@ -17,9 +17,6 @@ const SortFunc@[] SortFuncs = {
     SortCodePointDesc
 };
 
-const uint64 maxFrameTime  = 50;
-uint64       sortLastYield = 0;
-
 Icon@[]@ QuickSortAsync(Icon@[]@ arr, SortFunc@ func, int left = 0, int right = -1) {
     const uint64 now = Time::Now;
     if (now - sortLastYield > maxFrameTime) {
