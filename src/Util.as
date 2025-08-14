@@ -7,7 +7,7 @@ void Filter() {
     } else {
         iconsFiltered = {};
         for (uint i = 0; i < icons.Length; i++) {
-            if (icons[i].name.ToLower().Contains(filter.ToLower())) {
+            if (icons[i].name.Replace("Icons::", "").ToLower().Contains(filter.ToLower())) {
                 iconsFiltered.InsertLast(icons[i]);
             }
         }
