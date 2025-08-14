@@ -1,6 +1,21 @@
 // c 2025-08-13
 // m 2025-08-13
 
+void Filter() {
+    if (filter.Length == 0) {
+        iconsFiltered = icons;
+        return;
+    }
+
+    iconsFiltered = {};
+
+    for (uint i = 0; i < icons.Length; i++) {
+        if (icons[i].name.ToLower().Contains(filter.ToLower())) {
+            iconsFiltered.InsertLast(icons[i]);
+        }
+    }
+}
+
 uint UTF8ToCodepoint(const uint8[]& bytes) {
     switch (bytes.Length) {
         case 1:

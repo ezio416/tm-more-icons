@@ -8,6 +8,7 @@ const string  pluginTitle = pluginColor + pluginIcon + "\\$G " + pluginMeta.Name
 
 string filter;
 Icon@[] icons;
+Icon@[] iconsFiltered;
 
 void Main() {
     dictionary@ allIcons = Icons::GetAll();
@@ -15,6 +16,8 @@ void Main() {
     for (uint i = 0; i < keys.Length; i++) {
         icons.InsertLast(Icon("Icons::" + keys[i], string(allIcons[keys[i]])));
     }
+
+    Filter();
 }
 
 void Render() {
