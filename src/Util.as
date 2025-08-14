@@ -4,15 +4,54 @@
 void Filter() {
     if (filter.Length == 0) {
         iconsFiltered = icons;
+    } else {
+        iconsFiltered = {};
+        for (uint i = 0; i < icons.Length; i++) {
+            if (icons[i].name.ToLower().Contains(filter.ToLower())) {
+                iconsFiltered.InsertLast(icons[i]);
+            }
+        }
+    }
+
+    Sort();
+}
+
+enum SortMethod {
+    NameAsc,
+    NameDesc,
+    CodePointAsc,
+    CodePointDesc
+}
+
+void Sort() {
+    if (iconsFiltered.Length < 2) {
         return;
     }
 
-    iconsFiltered = {};
+    switch (sortMethod) {
+        case SortMethod::NameAsc:
+            iconsFiltered.Sort(function(a, b) {
+                return a.name.ToLower() < b.name.ToLower();
+            });
+            break;
 
-    for (uint i = 0; i < icons.Length; i++) {
-        if (icons[i].name.ToLower().Contains(filter.ToLower())) {
-            iconsFiltered.InsertLast(icons[i]);
-        }
+        case SortMethod::NameDesc:
+            iconsFiltered.Sort(function(a, b) {
+                return a.name.ToLower() > b.name.ToLower();
+            });
+            break;
+
+        case SortMethod::CodePointAsc:
+            iconsFiltered.Sort(function(a, b) {
+                return a.codePoint < b.codePoint;
+            });
+            break;
+
+        case SortMethod::CodePointDesc:
+            iconsFiltered.Sort(function(a, b) {
+                return a.codePoint > b.codePoint;
+            });
+            break;
     }
 }
 
