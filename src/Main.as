@@ -35,7 +35,7 @@ void Render() {
         return;
     }
 
-    if (UI::Begin(pluginTitle + "###main-" + pluginMeta.ID, S_Enabled, UI::WindowFlags::None)) {
+    if (UI::Begin(pluginTitle + "###main-" + pluginMeta.ID, S_Enabled)) {
         RenderWindow();
     }
     UI::End();
