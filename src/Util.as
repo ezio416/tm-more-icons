@@ -1,6 +1,3 @@
-// c 2025-08-13
-// m 2025-08-13
-
 void Filter() {
     if (filter.Length == 0) {
         iconsFiltered = icons;

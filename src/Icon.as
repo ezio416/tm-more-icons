@@ -1,6 +1,3 @@
-// c 2025-07-28
-// m 2025-08-13
-
 class Icon {
     uint8[] bytes;
     string  bytesStr;

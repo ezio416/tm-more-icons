@@ -1,6 +1,3 @@
-// c 2025-08-13
-// m 2025-08-13
-
 funcdef int SortFunc(Icon@ m1, Icon@ m2);
 
 enum SortMethod {

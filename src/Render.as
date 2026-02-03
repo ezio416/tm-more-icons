@@ -1,6 +1,3 @@
-// c 2025-07-28
-// m 2025-08-13
-
 const int fixed = UI::TableColumnFlags::WidthFixed;
 const int noSort = UI::TableColumnFlags::NoSort;
 
