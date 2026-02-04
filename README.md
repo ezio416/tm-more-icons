@@ -3,7 +3,7 @@
 
 # More Icons
 
-A searchable and sortable list of all available icons. Inspired by [Icon List](https://openplanet.dev/plugin/iconlist).
+A searchable and sortable list of all available icons. Meant for use by plugin developers. Inspired by [Icon List](https://openplanet.dev/plugin/iconlist).
 
 <!-- ![Signed](https://img.shields.io/badge/Signed-Yes-00AA00) -->
 <!-- ![Signed](https://img.shields.io/badge/Signed-School_Mode-CC1199) -->
@@ -11,3 +11,5 @@ A searchable and sortable list of all available icons. Inspired by [Icon List](h
 <!-- ![Version](https://img.shields.io/badge/dynamic/json?query=version&url=https%3A%2F%2Fopenplanet.dev%2Fapi%2Fplugin%2F815&label=Version&color=red) -->
 <!-- ![Game Maniaplanet](https://img.shields.io/badge/Game-Maniaplanet_4-blue) -->
 <!-- ![Game Turbo](https://img.shields.io/badge/Game-Turbo-blue) -->
+
+![image](images/more-icons.png)
