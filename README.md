@@ -3,7 +3,7 @@
 
 # More Icons
 
-A searchable and sortable list of all available icons.
+A searchable and sortable list of all available icons. Inspired by [Icon List](https://openplanet.dev/plugin/iconlist).
 
 <!-- ![Signed](https://img.shields.io/badge/Signed-Yes-00AA00) -->
 <!-- ![Signed](https://img.shields.io/badge/Signed-School_Mode-CC1199) -->
