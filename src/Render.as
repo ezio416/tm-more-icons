@@ -14,6 +14,8 @@ void RenderWindow() {
     UI::SameLine();
     UI::Text("(" + iconsFiltered.Length + " results)");
 
+    UI::TextDisabled("click any value to copy to clipboard");
+
     const int flags = 0
         | UI::TableFlags::RowBg
         | UI::TableFlags::ScrollY
