@@ -3,6 +3,7 @@ const int noSort = UI::TableColumnFlags::NoSort;
 
 void RenderWindow() {
     const float scale = UI::GetScale();
+    const string highlightColor = Text::FormatGameColor(S_HighlightColor);
 
     bool changed;
     filter = UI::InputText("filter", filter, changed);
@@ -77,7 +78,7 @@ void RenderWindow() {
                     name = Regex::Replace(
                         name,
                         "(" + filter + ")",
-                        "\\$F00$1\\$G",
+                        "\\$" + highlightColor + "$1\\$G",
                         Regex::Flags::CaseInsensitive
                     );
                 }

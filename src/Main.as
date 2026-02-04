@@ -8,7 +8,7 @@ Icon@[]      icons;
 Icon@[]      iconsFiltered;
 const uint64 maxFrameTime  = 50;
 uint64       sortLastYield = 0;
-SortMethod   sortMethod = SortMethod::NameAsc;
+SortMethod   sortMethod    = SortMethod::NameAsc;
 
 void Main() {
     dictionary@ allIcons = Icons::GetAll();
